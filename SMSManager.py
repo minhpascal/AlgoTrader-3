@@ -17,8 +17,8 @@ import EmailManager
 def sendSMS(smsText, mobileNumber):
     client = boto3.client(
         'sns',
-        aws_access_key_id="AKIAJXC7SFUDJFCW5PKA",
-        aws_secret_access_key="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",
+        aws_access_key_id="",
+        aws_secret_access_key="Jt6TlobgbIuCoCaZpR+",
         region_name='us-east-1'
     )
 
