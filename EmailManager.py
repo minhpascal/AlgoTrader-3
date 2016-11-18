@@ -23,7 +23,7 @@ def sendMail(fileName1, fileName2, buySell):
     server.starttls()
     server.ehlo()
     server.login(Constants.GMAIL_ID,Constants.GMAIL_PW)
-    server.sendmail("traderaga@gmail.com", 'apte.amit@yahoo.com', msg.as_string())
+    server.sendmail(Constants.GMAIL_ID, Constants.GMAIL_ID, msg.as_string())
     server.quit()
     
 def sendMailWithAttachments(fileNameList, subject, message, recipient):
@@ -43,7 +43,7 @@ def sendMailWithAttachments(fileNameList, subject, message, recipient):
     server.starttls()
     server.ehlo()
     server.login(Constants.GMAIL_ID,Constants.GMAIL_PW)
-    server.sendmail("traderaga@gmail.com", 'apte.amit@yahoo.com', msg.as_string())
+    server.sendmail(Constants.GMAIL_ID, Constants.GMAIL_ID, msg.as_string())
     server.quit()
     
     
@@ -56,7 +56,7 @@ def sendTextMail(subject, message, recipient):
     server.starttls()
     server.ehlo()
     server.login(Constants.GMAIL_ID,Constants.GMAIL_PW)
-    server.sendmail("traderaga@gmail.com", recipient, msg.as_string())
+    server.sendmail(Constants.GMAIL_ID, recipient, msg.as_string())
     server.quit()
     
 #sendTextMail("AutoTrader Warning", "Trade V page refrsh failed", ['apteag@gmail.com', 'apte.amit@yahoo.com'])
